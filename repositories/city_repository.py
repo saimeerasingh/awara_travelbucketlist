@@ -32,6 +32,17 @@ def select(id):
     city = City(result["name"],result["visited"],country,result["id"])
     return city
 
+def delete_all():
+    sql = "DELETE FROM cities"
+    run_sql(sql)
 
+def delete(id):
+    sql = "DELETE FROM cities WHERE id = %s"
+    values = [id]
+    run_sql(sql,values)
 
+def update(city):
+    sql = "UPDATE cities SET(name,visited,country_id) VALUES (%s, %s, %s) WHERE id = %s"
+    values = [city.name,city.visited,city.country.id]
+    run_sql(sql,values)
 
