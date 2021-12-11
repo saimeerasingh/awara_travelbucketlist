@@ -19,3 +19,5 @@ def select_all():
         countries.append(country)
     return countries
 
+def select(id):
+    
