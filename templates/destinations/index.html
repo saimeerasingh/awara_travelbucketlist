@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+
+<form  class = form-destination method="post" action="/destinations/new">
+    <div>
+      <label for="country">Country Name</label>
+      <input type="text" id="country" name="country" placeholder="Country Name" required autofocus>
+    </div>
+  
+    <div>
+      <label for="continent">Continent </label>
+      <input type="text" id="continent" name="continent" placeholder="Continent name" required>
+    </div>
+
+    <div>
+      <label for="city">City </label>
+      <input type="text" id="city" name="city" placeholder="City name" required>
+    </div>
+    
+    <button type="submit">Add Country to list</button>
+  
+  </form>   
+
+{% endblock %}

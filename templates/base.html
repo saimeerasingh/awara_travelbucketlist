@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Quest Advisor</title>
+  <title>Bucket list</title>
   <head>
-    <link title="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel
   </head>
   <body>
       <main class = "flex main-row">
+        <section class = "home-image">
+          <h1>TRAVEL BUCKET LIST</h1>
+     
           <nav>
             <ul>
               <li>
-                <a href="/countries">Countries</a>
+                <a href="/home">Home</a>
               </li>
               <li>
-                <a href="/cities">Cities</a>
+                <a href="/mybucketlist">My Bucket List</a>
               </li>
               <li>
-                <a href="/destinations">Destinations</a>
+                <a href="/destinations">Pin New Destination</a>
               </li>
             </ul>
-          </nav>     
+          </nav> 
+          {% block content %}
+            
+          {% endblock %}
+         
+          </section>   
        </main>
   </body>

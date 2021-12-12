@@ -1,7 +1,19 @@
+.home-image{
+    width:100vw;
+    height:100vh;
+    background-image: url('/static/pexels-francesco-ungaro-2325446.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 80%;
+}
+.form-destination{
+
+}
+
 .flex{
     display : flex;
 }
 
 .main-row{
-    flex-direction: column;
+    flex-direction: row;
 }
