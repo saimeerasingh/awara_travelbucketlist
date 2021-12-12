@@ -4,19 +4,19 @@ from models.country import Country
 
 import repositories.country_repository as country_repository
 
-countries_blueprint = Blueprint("countries", __name__)
+countries_blueprint = Blueprint("mybucketlist", __name__)
 
-@countries_blueprint.route("/countries")
+@countries_blueprint.route("/mybucketlist")
 def countries():
     countries = country_repository.select_all()
-    return render_template("countries/index.html", all_countries = countries)
+    return render_template("mybucketlist/index.html", all_countries = countries)
 
 # NEW
 # GET '/countries/new'
-# @countries_blueprint.route('/countries/new', methods =['GET'])
+# @countries_blueprint.route('/mybucketlist/new', methods =['GET'])
 # def new_country():
 #     countries = country_repository.select_all
-    
+#     return render_template("mybucketlist/index.html", all_countries = countries)
 
 # CREATE
 # POST '/countries
