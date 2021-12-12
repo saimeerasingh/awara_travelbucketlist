@@ -2,9 +2,9 @@ from unittest import result
 from db.run_sql import run_sql
 from models.destination import Destination
 from models.country import Country
-import country_repository as country_repository
+import repositories.country_repository as country_repository
 from models.city import City
-import city_repository as city_repository
+import repositories.city_repository as city_repository
 from tests import country_test
 
 def save(destination):
