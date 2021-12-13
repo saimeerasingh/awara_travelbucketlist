@@ -22,29 +22,30 @@ def destinations():
 
 # NEW
 # GET '/destinations/new'
-@destinations_blueprint.route('/destinations/new', methods = ['POST'])
+@destinations_blueprint.route('/destinations/new', methods = ['GET'])
 def new_destinations():
-    country =  Country(request.form['country'],request.form['continent'],False)
-    country_id = country_repository.save(country)
-    city = City(request.form['city'],False,country_id=country_id)
-    city_repository.save(city)
-    render_template('destinations/index.html', all_destinations = destinations, all_countries = countries, all_cities = cities)
-    return redirect('/')
+    # country =  Country(request.form['country'],request.form['continent'],False)
+    destinations = destination_repository.select_all()
+    countries = country_repository.select_all()
+    cities = city_repository.select_all()
+    return render_template('destinations/index.html', all_destinations = destinations, all_countries = countries, all_cities = cities)
+    
     
 
 # CREATE
-# POST '/countries
-@destinations_blueprint.route('/destinations/', methods = ['POST'])
+# POST '/destinations
+@destinations_blueprint.route('/destinations/new', methods = ['POST'])
 def create_destination():
     country_id = request.form['country_id']
-    dest_conti = request.form['continent']
+    # dest_conti = request.form['continent']
     city_id = request.form['city_id']
     dest_dest = request.form['destination']
     country = country_repository.select(country_id)
     city = city_repository.select(city_id)
-    destination = Destination(dest_dest,False,city,country,id)
+    destination = Destination(dest_dest,False,city,country)
     destination_repository.update(destination)
-    redirect ('/')
+    destination_repository.save(destination)
+    return redirect ('/')
 
 
 # SHOW

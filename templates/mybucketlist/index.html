@@ -5,14 +5,16 @@
     
 <div class = "destinations-list">
     {% for city in all_cities %}
-    <p>{{city.name}}</p>
-    <hr>
-    <p>{{city.country.name}}</p>
+    <p>City:{{city.name}}</p>
+    <p>Country:{{city.country.name}}</p>
+    <p>Continent:{{city.country.continent}}</p>
     {% endfor %}
+    <br>
+    <!-- <h1>hi</h1>
     {% for country in all_countries %}
-    <p>{{country.continent}} mins</p>
+    <p>{{country.continent}}</p>
     {% endfor %}
-    <p>Visited?</p>
+    <p>Visited?</p> -->
 </div>
 </table>      
 
