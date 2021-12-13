@@ -2,11 +2,21 @@
 {% block content %}
     
 
-    {% for country in all_countries  %}
-<table>
-    {{country.name}}
+    
+<tr>
+    <th>Country</th>
+    <th>City</th>
+    <th>Destination</th>
+</tr>
+<tr>
+    {% for country in all_countries %}
+   
+    <td>{{country.name}}</td>
+   
+    
+{% endfor %}
 </table>      
-    {% endfor %}
+
 
 
 {% endblock %}

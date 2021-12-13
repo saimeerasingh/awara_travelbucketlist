@@ -8,7 +8,7 @@ def save(country):
     results = run_sql(sql,values)
     id = results[0]['id']
     country.id = id
-    return id
+
 
 def select_all():
     countries = []
