@@ -6,7 +6,10 @@
     background-size: cover;
     opacity: 60%;
 }
-.form-destination{
+.nav-list{
+    display:flex;
+    flex-direction: row;
+
 
 }
 
