@@ -37,11 +37,12 @@ def new_destinations():
 # POST '/destinations
 @destinations_blueprint.route('/destinations/new', methods = ['POST'])
 def create_destination():
-    print(request.form, file=sys.stderr)
+   
     country_id = request.form['country']
     city_id = request.form['city']
     dest_dest = request.form['destination']
     country = country_repository.select(country_id)
+    print(country_id,country,country.id, file=sys.stderr)
     city = city_repository.select(city_id)
     destination = Destination(dest_dest,False,city,country)
     destination_repository.update(destination)
