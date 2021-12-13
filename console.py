@@ -12,13 +12,13 @@ city_repository.delete_all()
 destination_repository.delete_all()
 
 country1 = Country('India','Asia',True)
-city_repository.save(country1)
+country_repository.save(country1)
 
 country2 = Country('France','Europe',True)
-city_repository.save(country2)
+country_repository.save(country2)
 
 country3 = Country('Australia','Australia',False)
-city_repository.save(country3)
+country_repository.save(country3)
 
 city1 = City('Mumbai',True,country1)
 city_repository.save(city1)

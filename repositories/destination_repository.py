@@ -36,7 +36,7 @@ def select(id):
     return destionation
 
 def delete_all():
-    sql = "DELETE * FROM destinations"
+    sql = "DELETE FROM destinations"
     run_sql(sql)
 
 def delete(id):
