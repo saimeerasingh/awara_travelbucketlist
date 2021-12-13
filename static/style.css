@@ -29,11 +29,13 @@
     
 .destinations-list{
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns:auto;
     display: flex;
     flex-wrap: wrap;
     width: 300px;
     margin: 0 auto;
+    background-color: honeydew;
+
 }
 
 .flex{
