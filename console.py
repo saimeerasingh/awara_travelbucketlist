@@ -38,18 +38,18 @@ city_repository.save(city5)
 city6 = City('Sydney',False,country3)
 city_repository.save(city6)
 
-destination1 = Destination('Gateway of India', True,city1)
+destination1 = Destination('Gateway of India', True,city1,country1)
 destination_repository.save(destination1)
 
-destination2 = Destination('India Gate', False, city2)
+destination2 = Destination('India Gate', False, city2,country1)
 destination_repository.save(destination2)
 
-destination3 = Destination('Hawa Mahal', False, city3)
+destination3 = Destination('Hawa Mahal', False, city3,country1)
 destination_repository.save(destination3)
 
-destination4 = Destination('Eiffel Tower', True, city4)
+destination4 = Destination('Eiffel Tower', True, city4,country2)
 destination_repository.save(destination4)
 
-destination5 = Destination('Opera House', False, city6)
+destination5 = Destination('Opera House', False, city6,country3)
 destination_repository.save(destination5)
 

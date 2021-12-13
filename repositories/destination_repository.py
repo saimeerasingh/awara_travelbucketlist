@@ -8,11 +8,12 @@ import repositories.city_repository as city_repository
 from tests import country_test
 
 def save(destination):
-    sql = "INSERT INTO destinations (name, visited) VALUES (%s, %s) RETURNING *"
-    values = [destination.name,destination.visited]
+    sql = "INSERT INTO destinations (name, visited,city_id,country_id) VALUES (%s, %s, %s, %s) RETURNING *"
+    values = [destination.name,destination.visited,destination.city.id,destination.country.id]
     results = run_sql(sql,values)
     id = results[0]['id']
-    destination.id =id
+    destination.id = id
+    return destination
 
 def select_all():
     destinations = []
