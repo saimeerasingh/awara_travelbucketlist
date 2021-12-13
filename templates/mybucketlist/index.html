@@ -3,18 +3,17 @@
     
 
     
-<tr>
-    <th>Country</th>
-    <th>City</th>
-    <th>Destination</th>
-</tr>
-<tr>
+<div class = "destinations-list">
+    {% for city in all_cities %}
+    <p>{{city.name}}</p>
+    <hr>
+    <p>{{city.country.name}}</p>
+    {% endfor %}
     {% for country in all_countries %}
-   
-    <td>{{country.name}}</td>
-   
-    
-{% endfor %}
+    <p>{{country.continent}} mins</p>
+    {% endfor %}
+    <p>Visited?</p>
+</div>
 </table>      
 
 

@@ -10,8 +10,8 @@ countries_blueprint = Blueprint("mybucketlist", __name__)
 @countries_blueprint.route("/mybucketlist")
 def countries():
     countries = country_repository.select_all()
-    # cities = city_repository.select_all()
-    return render_template("mybucketlist/index.html", all_countries = countries)
+    cities = city_repository.select_all()
+    return render_template("mybucketlist/index.html", all_countries = countries, all_cities = cities)
 
 # NEW
 # GET '/countries/new'

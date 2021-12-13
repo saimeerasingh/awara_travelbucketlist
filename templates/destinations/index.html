@@ -15,9 +15,9 @@
     <div>
       <label for="continent">Continent </label>
       <select id="continent" name="continent">
-      <option value="continent1">Asia</option>
-      <option value="continent2">Europe</option>
-      <option value="continent3">Australia</option>
+        {% for country  in all_countries %}
+        <option value={{country.id}}>{{country.continent}}</option>
+        {% endfor %}
     </div>
 
     <div>
@@ -26,6 +26,11 @@
         {% for city  in all_cities %}
         <option value={{city.id}}>{{city.name}}</option>
         {% endfor %}
+    </div>
+
+    <div>
+      <label for="destination">Destination</label>
+      <input type="text" name ="destination" placeholder="Your dream destination">
     </div>
     
     <button type="submit">Add Country to list</button>

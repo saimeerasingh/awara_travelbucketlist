@@ -3,7 +3,8 @@
     height:100vh;
     background-image: url('/static/pexels-francesco-ungaro-2325446.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
     opacity: 60%;
 }
 .menu{
@@ -20,13 +21,20 @@
     font-family: "Helvetica", arial, sans-serif; font-size: 20px;
   }
 .form-destination{
-
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+  }
     
+.destinations-list{
+    display: grid;
+    grid-template-columns: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
 }
-
-
-
-
 
 .flex{
     display : flex;

@@ -18,7 +18,7 @@ def destinations():
     destinations = destination_repository.select_all()
     countries = country_repository.select_all()
     cities = city_repository.select_all()
-    return render_template('destinations/index.html', all_destinations = destinations, all_countries = countries)
+    return render_template('destinations/index.html', all_destinations = destinations, all_countries = countries,all_cities = cities)
 
 # NEW
 # GET '/destinations/new'
@@ -34,9 +34,23 @@ def new_destinations():
 
 # CREATE
 # POST '/countries
+@destinations_blueprint.route('/destinations/', methods = ['POST'])
+def create_destination():
+    country_id = request.form['country_id']
+    dest_conti = request.form['continent']
+    city_id = request.form['city_id']
+    dest_dest = request.form['destination']
+    country = country_repository.select(country_id)
+    city = city_repository.select(city_id)
+    destination = Destination(dest_dest,False,city,country,id)
+    destination_repository.update(destination)
+    redirect ('/')
+
 
 # SHOW
-# GET '/countries/<id>'
+# GET '/destinations/<id>'
+
+
 
 # EDIT
 # GET '/countries/<id>/edit'
@@ -46,4 +60,3 @@ def new_destinations():
 
 # DELETE
 # DELETE '/countries/<id>'
-
