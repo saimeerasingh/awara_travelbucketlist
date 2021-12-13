@@ -9,14 +9,16 @@
         {% for country  in all_countries %}
         <option value={{country.id}}>{{country.name}}</option>
         {% endfor %}
-      
+      </select>
     </div>
+    <br>
     <div>
-      <label for="city">City </label>
+      <label for="city">City</label>
       <select id="city" name="city">
         {% for city  in all_cities %}
         <option value={{city.id}}>{{city.name}}</option>
         {% endfor %}
+        </select>
     </div>
 
     <div>
