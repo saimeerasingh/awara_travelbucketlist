@@ -9,29 +9,5 @@ countries_blueprint = Blueprint("mybucketlist", __name__)
 
 @countries_blueprint.route("/mybucketlist")
 def countries():
-    # countries = country_repository.select_all()
-    # cities = city_repository.select_all()
     destinations = destination_repository.select_all()
     return render_template("mybucketlist/index.html", all_destinations = destinations)
-
-# NEW
-# GET '/countries/new'
-# @countries_blueprint.route('/mybucketlist/new', methods =['GET'])
-# def new_country():
-#     countries = country_repository.select_all
-#     return render_template("mybucketlist/index.html", all_countries = countries)
-
-# CREATE
-# POST '/countries
-
-# SHOW
-# GET '/countries/<id>'
-
-# EDIT
-# GET '/countries/<id>/edit'
-
-# UPDATE
-# PUT '/countries/<id>'
-
-# DELETE
-# DELETE '/countries/<id>'
