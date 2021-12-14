@@ -17,10 +17,25 @@
     <td><p>{{destination.country.name}}</p></td>
     <!-- <td><p>{{destination.country.continent}}</p></td> -->
     <td><p>{{destination.name}}</p></td>
-   <td><input type="checkbox" unchecked="false"/></td>
+
+    <td>
+    {% if destination.visited %}
+    <input type="checkbox" checked/>
+   
+      {% else %}
+
+      <input type="checkbox" />   
+   
+    {% endif %}
+</td>
     </tr>
     {% endfor %}
-    <br>
+    <hr>
+    <table>
+        
+    </table>
+
+
    
 
     <!-- <h1>hi</h1>
