@@ -1,3 +1,4 @@
+import sys
 from unittest import result
 from db.run_sql import run_sql
 from models.country import Country
@@ -24,7 +25,8 @@ def select(id):
     sql = "SELECT * FROM countries WHERE id = %s"
     values = [id]
     result = run_sql(sql,values)[0]
-    country = Country(result["name"],result["continent"],result["id"])
+    country = Country(name=result["name"],continent=result["continent"],id=result["id"],visited=False)
+    print(sql, values, result, file=sys.stderr)
     return country
 
 def delete_all():

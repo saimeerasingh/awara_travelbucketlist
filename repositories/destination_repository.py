@@ -6,10 +6,12 @@ import repositories.country_repository as country_repository
 from models.city import City
 import repositories.city_repository as city_repository
 from tests import country_test
+import sys
 
 def save(destination):
     sql = "INSERT INTO destinations (name, visited,city_id,country_id) VALUES (%s, %s, %s, %s) RETURNING *"
     values = [destination.name,destination.visited,destination.city.id,destination.country.id]
+    print(destination, sql, values,  file=sys.stderr)
     results = run_sql(sql,values)
     id = results[0]['id']
     destination.id = id

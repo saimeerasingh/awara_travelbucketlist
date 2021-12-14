@@ -42,24 +42,8 @@ def create_destination():
     city_id = request.form['city']
     dest_dest = request.form['destination']
     country = country_repository.select(country_id)
-    print(country_id,country,country.id, file=sys.stderr)
     city = city_repository.select(city_id)
-    destination = Destination(dest_dest,False,city,country)
-    destination_repository.update(destination)
+    destination = Destination(name=dest_dest,visited=False,city=city,country=country)
+    print(country_id, country, destination.country.id, file=sys.stderr)
     destination_repository.save(destination)
     return redirect ('/mybucketlist')
-
-
-# SHOW
-# GET '/destinations/<id>'
-
-
-
-# EDIT
-# GET '/countries/<id>/edit'
-
-# UPDATE
-# PUT '/countries/<id>'
-
-# DELETE
-# DELETE '/countries/<id>'

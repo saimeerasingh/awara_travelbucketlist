@@ -8,14 +8,15 @@
         <tr>
         <th>City</th>
         <th>Country</th>
-        <th>Continent</th>
+        <!-- <th>Continent</th> -->
         <th>Destination</th>
         </tr>
     {% for destination in all_destinations %}
     <tr>
     <td><p>{{destination.city.name}}</p></td>
     <td><p>{{destination.country.name}}</p></td>
-    <td><p>{{destination.country.continent}}</p></td>
+    <!-- <td><p>{{destination.country.continent}}</p></td> -->
+    <td><p>{{destination.name}}</p></td>
    <td><input type="checkbox" unchecked="false"/></td>
     </tr>
     {% endfor %}
