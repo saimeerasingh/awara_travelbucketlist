@@ -33,8 +33,8 @@ def select(id):
     result = run_sql(sql,values)[0]
     country = country_repository.select(result["country_id"])
     city = city_repository.select(result["city_id"])
-    destionation = Destination(result["name"],result["visited"],country,city,result["id"])
-    return destionation
+    destination = Destination(result["name"],result["visited"],country,city,result["id"])
+    return destination
 
 def delete_all():
     sql = "DELETE FROM destinations"
@@ -46,8 +46,8 @@ def delete(id):
     run_sql(sql,values)
 
 def update(destination):
-    sql = "UPDATE destionations SET(name,visited,country_id,city_id) VALUES (%s, %s, %s, %s) WHERE id = %s"
-    values = [destination.name,destination.visited, destination.country.id,destination.city.id,]
+    sql = "UPDATE destinations SET(name,visited,country_id,city_id) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [destination.name,destination.visited, destination.country.id,destination.city.id,destination.id]
     run_sql(sql,values)
 
 

@@ -39,6 +39,6 @@ def delete(id):
     run_sql(sql,values)
     
 def update(country):
-    sql = "UPDATE coutries SET(name,continent,visited) VALUES (%s ,%s ,%s) WHERE id =%s "
+    sql = "UPDATE coutries SET(name,continent,visited) = (%s ,%s ,%s) WHERE id =%s "
     values = [country.name,country.continent,country.visited,country.id]
     run_sql(sql,values)

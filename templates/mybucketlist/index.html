@@ -17,7 +17,7 @@
    
     <td>
     <label for="visited">Visited</label>
-    <input type="checkbox" name="visited" id="visited" value="False">
+    <input type="checkbox" name="visited" id="visited" value="False" disabled="disabled">
     </td>
     {% if destination.visited %}
     <p><i>Visited </i></p>
@@ -28,6 +28,10 @@
     <button class="trash-button">delete<i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
     </form> 
 </td>
+<td>
+    <form action ="/mybucketlist/{{destination.id}}/set/visted" method = "POST">
+        <button type="submit" >Set Visted</button>
+    </form>
 </td>
     {% endif %}
     </tr>
@@ -53,7 +57,7 @@
     <td>
         <form>
         <label for="visited">Visited</label>
-        <input type="checkbox" name="" id="visited" value="True">
+        <input type="checkbox" name="" id="visited" value="True" checked disabled="disabled">
         </td>
         {% if destination.visited %}
         <p><i>Visited </i></p>
@@ -67,8 +71,8 @@
     </form> 
 </td>     
 <td>
-    <form action ="/mybucketlist/{{destination.id}}" method = "POST">
-        <button type="submit" >Apply Changes</button>
+    <form action ="/mybucketlist/{{destination.id}}/set/not/visted" method = "POST">
+        <button type="submit" >Set Not Visited</button>
     </form>
 
 </td>

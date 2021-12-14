@@ -60,6 +60,21 @@ def update_destination(id):
     destination_repository.update(destination)
     return redirect('/mybucketlist')
 
+@destinations_blueprint.route('/mybucketlist/<id>/set/not/visted', methods =['POST'])
+def set_not_visited_destination(id):
+#1    destination = destination_repository.select(id)
+    destination.visited = False
+    print("not visisted", destination.id , destination.name , destination.visited, file=sys.stderr)
+    destination_repository.update(destination)
+    return redirect('/mybucketlist')
+
+@destinations_blueprint.route('/mybucketlist/<id>/set/visted', methods =['POST'])
+def set_visited_destination(id):
+    destination = destination_repository.select(id)
+    destination.visited = True
+    destination_repository.update(destination)
+    return redirect('/mybucketlist')
+
 @destinations_blueprint.route('/mybucketlist/<id>/delete', methods =['POST'])
 def delete_destination(id):
     destination_repository.delete(id)
