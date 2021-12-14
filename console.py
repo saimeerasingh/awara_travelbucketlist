@@ -20,6 +20,21 @@ country_repository.save(country2)
 country3 = Country('Australia','Australia',False)
 country_repository.save(country3)
 
+country4 = Country('California','North America',False)
+country_repository.save(country4)
+
+country5 = Country('Brazil','South America',False)
+country_repository.save(country5)
+
+country6 = Country('Spain','Europe',False)
+country_repository.save(country6)
+
+country7 = Country('Kenya','Africa',False)
+country_repository.save(country7)
+
+country8 = Country('Turkey','Asia',False)
+country_repository.save(country8)
+
 city1 = City('Mumbai',True,country1)
 city_repository.save(city1)
 
@@ -37,6 +52,21 @@ city_repository.save(city5)
 
 city6 = City('Sydney',False,country3)
 city_repository.save(city6)
+
+city7 = City('Los Angeles',False,country4)
+city_repository.save(city7)
+
+city8 = City('Sao Paulo',False,country5)
+city_repository.save(city8)
+
+city9 = City('Barcelona',False,country6)
+city_repository.save(city9)
+
+city10 = City('Nairobi',False,country7)
+city_repository.save(city10)
+
+city11 = City('Istanbul',False,country8)
+city_repository.save(city11)
 
 destination1 = Destination('Gateway of India', True,city1,country1)
 destination_repository.save(destination1)
