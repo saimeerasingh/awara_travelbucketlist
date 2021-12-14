@@ -1,4 +1,4 @@
-
+import sys
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from controllers.cities_controllers import cities
@@ -43,19 +43,20 @@ def create_destination():
     visited = True if 'visited' in request.form else False
     country = country_repository.select(country_id)
     city = city_repository.select(city_id)
-    destination = Destination(name=dest_dest,visited= visited,city=city,country=country)
+    destination = Destination(name=dest_dest,visited= visited,city=city,country=country,id=id)
     destination_repository.save(destination)
     return redirect ('/mybucketlist')
 
 @destinations_blueprint.route('/mybucketlist/<id>',methods = ['POST'])
 def update_destination(id):
+    print(request.form, file=sys.stderr)
     country_id = request.form['country']
     city_id = request.form['city']
     dest_dest = request.form['destination']
     visited = True if 'visited' in request.form else False
     country = country_repository.select(country_id)
     city = city_repository.select(city_id)
-    destination = Destination(name=dest_dest,visited= visited,city=city,country=country)
+    destination = Destination(name=dest_dest,visited= visited,city=city,country=country,id =id)
     destination_repository.update(destination)
     return redirect('/mybucketlist')
 
