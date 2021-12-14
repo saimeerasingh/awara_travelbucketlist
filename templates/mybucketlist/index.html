@@ -1,23 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-    
-
-    
 <div class = "destinations-list">
     <table>
         <tr>
         <th>City</th>
         <th>Country</th>
-        <!-- <th>Continent</th> -->
         <th>Destination</th>
         </tr>
     {% for destination in all_destinations %}
+    {% if not destination.visited %}
     <tr>
     <td><p>{{destination.city.name}}</p></td>
     <td><p>{{destination.country.name}}</p></td>
-    <!-- <td><p>{{destination.country.continent}}</p></td> -->
     <td><p>{{destination.name}}</p></td>
-
+   
     <td>
     {% if destination.visited %}
     <input type="checkbox" checked/>
@@ -28,21 +24,40 @@
    
     {% endif %}
 </td>
+    {% endif %}
     </tr>
     {% endfor %}
-    <hr>
+</div>
+</table>         
+
+    
+<div class = "destinations-list">
     <table>
-        
-    </table>
-
-
+        <tr>
+        <th>City</th>
+        <th>Country</th>
+        <th>Destination</th>
+        </tr>
+    {% for destination in all_destinations %}
+    {% if destination.visited %}
+    <tr>
+    <td><p>{{destination.city.name}}</p></td>
+    <td><p>{{destination.country.name}}</p></td>
+    <td><p>{{destination.name}}</p></td>
    
+    <td>
+    {% if destination.visited %}
+    <input type="checkbox" checked/>
+   
+      {% else %}
 
-    <!-- <h1>hi</h1>
-    {% for country in all_countries %}
-    <p>{{country.continent}}</p>
+      <input type="checkbox" />   
+   
+    {% endif %}
+</td>
+    {% endif %}
+    </tr>
     {% endfor %}
-    <p>Visited?</p> -->
 </div>
 </table>      
 
