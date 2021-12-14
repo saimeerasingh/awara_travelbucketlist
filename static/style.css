@@ -37,7 +37,16 @@
     background-color: honeydew;
 
 }
+.trash-button{
+    padding: auto;
+}   
+.checklist-table{
+    display: flex;
+}
 
+.delete-form{
+    display: inline;
+  }
 .flex{
     display : flex;
 }

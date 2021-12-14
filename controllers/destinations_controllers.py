@@ -47,3 +47,8 @@ def create_destination():
     print(country_id, country, destination.country.id, file=sys.stderr)
     destination_repository.save(destination)
     return redirect ('/mybucketlist')
+
+@destinations_blueprint.route('/mybucketlist/<id>/delete', methods =['POST'])
+def delete_destination(id):
+    destination_repository.delete(id)
+    return redirect('/mybucketlist')
