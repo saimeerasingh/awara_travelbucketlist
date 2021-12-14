@@ -16,22 +16,13 @@
     <td><p>{{destination.name}}</p></td>
    
     <td>
-    <label for="recurring">Visited</label>
-    <input type="checkbox" name="recurring" id="recurring" value="False">
+    <label for="visited">Visited</label>
+    <input type="checkbox" name="visited" id="visited" value="False">
     </td>
     {% if destination.visited %}
     <p><i>Visited </i></p>
     {% endif %}
     </td>
-
-    <!-- {% if destination.visited %}
-    <input type="checkbox" checked/>
-   
-      {% else %}
-
-      <input type="checkbox" />   
-   
-    {% endif %} -->
 <td>
     <form class="delete-form" action="/mybucketlist/{{destination.id}}/delete" method="POST"> <!-- NEW -->
     <button class="trash-button">delete<i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
@@ -57,25 +48,21 @@
     <td><p>{{destination.city.name}}</p></td>
     <td><p>{{destination.country.name}}</p></td>
     <td><p>{{destination.name}}</p></td>
+    
+        
     <td>
-        <label for="recurring">Visited</label>
-        <input type="checkbox" name="recurring" id="recurring" value="False">
+        <form>
+        <label for="visited">Visited</label>
+        <input type="checkbox" name="" id="visited" value="True">
         </td>
         {% if destination.visited %}
         <p><i>Visited </i></p>
         {% endif %}
-        </td>
+        <</form>
+    </td>
+       
+
     <td>
-
-   
-    <!-- {% if destination.visited %}
-    <input type="checkbox" checked/>
-   
-      {% else %}
-
-      <input type="checkbox" />   
-   
-    {% endif %} -->
 </td>
 <td>
     <form class="delete-form" action="/mybucketlist/{{destination.id}}/delete" method="POST"> <!-- NEW -->
@@ -84,8 +71,12 @@
 </td>
     {% endif %}
     </tr>
-    {% endfor %}
+   
 </div>
+<form action ="/mybucketlist/{{destination.id}}" method = "POST">
+<button type="submit" >Apply Changes</button>
+</form>
+{% endfor %}
 </table>      
 
 </div>

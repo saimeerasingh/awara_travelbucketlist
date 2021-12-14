@@ -48,7 +48,7 @@ def create_destination():
     return redirect ('/mybucketlist')
 
 @destinations_blueprint.route('/mybucketlist/<id>',methods = ['POST'])
-def update_destination():
+def update_destination(id):
     country_id = request.form['country']
     city_id = request.form['city']
     dest_dest = request.form['destination']
