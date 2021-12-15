@@ -28,9 +28,7 @@ title{
     list-style: none;
     color: white;
     font-family:"Comic Sans MS", "Comic Sans", cursive;
-    
-
-  }
+   }
 .title{
    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
    font-size:400%;
@@ -82,10 +80,6 @@ title{
     grid-template-areas:
       'search search'
       'table1  table2';
-    /* grid-template-columns: 4fr 4fr; */
-    /* align-content: space-around;
-    justify-content: space-between; */
-    
   }
 
 .delete-form{
@@ -114,7 +108,7 @@ input, select, button {
 .search{
     display: inline;
     grid-area: search;
-    margin-left: 600px;
+    margin-left: 650px;
   }
   
   /* Style the search field */
