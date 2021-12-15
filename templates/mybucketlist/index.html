@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <aside>
 <form class = "search" id="form" action="/mybucketlist/search" method = "POST"> 
 <input type="text" placeholder="Search.." name="search">
 <button type="submit"><i class="fa fa-search"></i></button>
 </form>
-    </aside>
+</aside>
+
 <div class = "checklist-table">
     <table>
     <td>
@@ -41,7 +43,8 @@
 
 </table>
 </div>
-    
+</td>
+<td>
 <div class = "destinations-list">  
 <table>
 
