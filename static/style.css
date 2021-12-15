@@ -84,3 +84,17 @@ title{
 .main-row{
     flex-direction: row;
 }
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 0 auto;
+}
+input, select, button {
+    font-size: 100%;
+    width : 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+  
