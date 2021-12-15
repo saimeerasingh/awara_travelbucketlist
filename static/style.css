@@ -1,7 +1,7 @@
 .home-image{
     width:100vw;
     height:100vh;
-    background-image: url('/static/pexels-leah-kelley-3935702.jpg');
+    background-image: url('/static/worldmap.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -20,7 +20,16 @@
     color: white;
     font-family: "Helvetica", arial, sans-serif; font-size: 20px;
   }
-  
+.title{
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+   font-size:400%;
+   justify-self: center;
+   font-style: italic;
+   padding-left: 100px;
+   text-shadow: 2px 2px 4px #000000;
+   background:whitesmoke;
+   opacity: 80%;
+}
 .destination {
     display: grid;
     align-items: center;
