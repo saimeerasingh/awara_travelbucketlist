@@ -86,5 +86,5 @@ def search_destination():
     search_result = destination_repository.search_all(search_name)
     print(search_result,file=sys.stderr)
     # destination_repository.delete(id)
-    return redirect('/mybucketlist')
+    return  render_template('mybucketlist/index.html', all_destinations = search_result)
 
