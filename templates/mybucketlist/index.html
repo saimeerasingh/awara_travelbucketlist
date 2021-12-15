@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 <aside>
-    <form class = "search" id="form" action="/mybucketlist/search" method = "POST"> 
-        <input type="search" id="search" name="search" placeholder="Search...">
-        <button>Search</button>
-      </form>
+<form class = "search" id="form" action="/mybucketlist/search" method = "POST"> 
+<input type="text" placeholder="Search.." name="search">
+<button type="submit"><i class="fa fa-search"></i></button>
+</form>
     </aside>
-<div class = checklist-table>
+<div class = "checklist-table">
     <table>
     <td>
     <tr>
