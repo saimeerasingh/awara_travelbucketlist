@@ -1,4 +1,4 @@
-import sys
+
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from controllers.cities_controllers import cities
@@ -84,7 +84,5 @@ def search_destination():
     print(request.form,file=sys.stderr)
     search_name = request.form['search']
     search_result = destination_repository.search_all(search_name)
-    print(search_result,file=sys.stderr)
-    # destination_repository.delete(id)
     return  render_template('mybucketlist/index.html', all_destinations = search_result)
 

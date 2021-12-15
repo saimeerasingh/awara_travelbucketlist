@@ -1,4 +1,4 @@
-import sys
+
 from db.run_sql import run_sql
 from models.destination import Destination
 from models.country import Country
@@ -54,7 +54,6 @@ def search_all(name):
     destinations = []
     sql = f"SELECT * FROM destinations WHERE name ilike '%{name}%'"
     results = run_sql(sql)
-    print(name,results,file=sys.stderr)
     for row in results:
         country = country_repository.select(row["country_id"])
         city = city_repository.select(row["city_id"])
