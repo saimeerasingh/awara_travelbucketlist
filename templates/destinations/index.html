@@ -1,137 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="/static/style.css">
-		<title>Bucket list</title>
-	</head>
-	<body>
-		<section class = "home-image">
-			<h1>TRAVEL BUCKET LIST</h1>
-			<header>
-				<nav>
-					<ul class = "menu">
-						<li>
-							<a href="/">Home</a>
-						</li>
-						<li>
-							<a href="/mybucketlist">My Bucket List</a>
-						</li>
-						<li>
-							<a href="/destinations">Pin New Destination</a>
-						</li>
-					</ul>
-				</nav>
-			</header>
-			<article class = "title">find your next travel destination!</article>
-			<div class = "checklist-table">
-				<table>
-					<td>
-						<tr>
-							<div class = "destinations-list">
-								<table>
-									<tr>
-										<th>City</th>
-										<th>Country</th>
-										<th>Destination</th>
-									</tr>
-								</tr>
-								<tr>
-									<td>
-										<p>India</p>
-									</td>
-									<td>
-										<p>Jaipur</p>
-									</td>
-									<td>
-										<p>Hawa Mahal</p>
-									</td>
-									<td>
-										<form class="delete-form" action="/mybucketlist/3/delete" method="POST">
-											<!-- NEW -->
-											<button class="trash-button">delete
-												<i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i>
-											</button>
-										</form>
-									</td>
-									<td>
-										<form action ="/mybucketlist/3/set/visted" method = "POST">
-											<button type="submit" >Set Visted</button>
-										</form>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<p>India</p>
-									</td>
-									<td>
-										<p>Delhi</p>
-									</td>
-									<td>
-										<p>India Gate</p>
-									</td>
-									<td>
-										<form class="delete-form" action="/mybucketlist/2/delete" method="POST">
-											<!-- NEW -->
-											<button class="trash-button">delete
-												<i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i>
-											</button>
-										</form>
-									</td>
-									<td>
-										<form action ="/mybucketlist/2/set/visted" method = "POST">
-											<button type="submit" >Set Visted</button>
-										</form>
-									</td>
-								</tr>
-							</table>
-						</div>
-						<div class = "destinations-list">
-							<table>
-								<tr>
-									<th>City</th>
-									<th>Country</th>
-									<th>Destination</th>
-								</tr>
-								<tr>
-									<td>
-										<p>France</p>
-									</td>
-									<td>
-										<p>Paris</p>
-									</td>
-									<td>
-										<p>Eiffel Tower</p>
-									</td>
-									<td>
-										<form class="delete-form" action="/mybucketlist/4/delete" method="POST">
-											<!-- NEW -->
-											<button class="trash-button">delete
-												<i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i>
-											</button>
-										</form>
-									</td>
-									<td>
-										<form action ="/mybucketlist/4/set/not/visted" method = "POST">
-											<button type="submit" >Set Not Visited</button>
-										</form>
-									</td>
-								</tr>
-							</tr>
-						</tr>
-					</table>
-				</div>
-			</tr>
-		</td>
-	</table>
-</div>
-<aside>
-	<form id="form" action="/mybucketlist/search" method = "POST">
-		<input type="search" id="search" name="search" placeholder="Search...">
-			<button>Search</button>
-		</form>
-	</aside>
-</section>undefined</body>undefined</html>
+<div class = " destination">
+<h2>Enter your dream Destination</h2> 
+<form  class = form-destination method="post" action="/destinations/new">
+  
+  <div>
+      
+      <label for="country">Country Name</label>
+      <select id="country" name="country">
+        {% for country  in all_countries %}
+        <option value={{country.id}}>{{country.name}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <br>
+    <div>
+      <label for="city">City</label>
+      <select id="city" name="city">
+        {% for city  in all_cities %}
+        <option value={{city.id}}>{{city.name}}</option>
+        {% endfor %}
+        </select>
+    </div>
+
+    <div>
+      <label for="destination">Destination</label>
+      <input type="text" name ="destination" placeholder="Your dream destination">
+    </div>
+    
+    <button type="submit">Add Country to list</button>
+  
+  </form>  
+  </div> 
 
 {% endblock %}
