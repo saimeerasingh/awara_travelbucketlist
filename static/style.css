@@ -67,12 +67,18 @@ title{
     background-color: honeydew;
 
 }
-.trash-button{
-    padding: auto;
-}   
-.checklist-table{
+.destinations-list-1{
+    display: grid;
+    grid-template-columns:auto;
     display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+    background-color: honeydew;
 }
+/* .checklist-table{
+    display: flex;
+} */
 
 .delete-form{
     display: inline;

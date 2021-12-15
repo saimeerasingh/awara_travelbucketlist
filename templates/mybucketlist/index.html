@@ -8,10 +8,6 @@
 </form>
 </aside>
 
-<div class = "checklist-table">
-    <table>
-    <td>
-    <tr>
 <div class = "destinations-list">
 <table>
         <tr>
@@ -29,7 +25,7 @@
 
     <td>
     <form class="delete-form" action="/mybucketlist/{{destination.id}}/delete" method="POST"> <!-- NEW -->
-    <button class="trash-button">delete<i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+    <button class="trash-button"><i class="fa fa-trash-o fa" style="color:gray" aria-hidden="true"></i></button>
     </form> 
     </td>
     <td>
@@ -43,9 +39,9 @@
 
 </table>
 </div>
-</td>
-<td>
-<div class = "destinations-list">  
+
+
+<div class = "destinations-list-1">  
 <table>
 
         <tr>
@@ -63,7 +59,7 @@
         
 <td>
     <form class="delete-form" action="/mybucketlist/{{destination.id}}/delete" method="POST"> <!-- NEW -->
-    <button class="trash-button">delete<i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+    <button class="trash-button"><i class="fa fa-trash-o fa" style="color:gray" aria-hidden="true"></i></button>
     </form> 
 </td>     
 <td>
@@ -80,10 +76,5 @@
 </table>   
 </div>
 
-
-</tr>
-</td>
-</table>
-</div>
 
 {% endblock %}
