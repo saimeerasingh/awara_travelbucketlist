@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<aside>
+    <form class = "search" id="form" action="/mybucketlist/search" method = "POST"> 
+        <input type="search" id="search" name="search" placeholder="Search...">
+        <button>Search</button>
+      </form>
+    </aside>
 <div class = checklist-table>
     <table>
     <td>
@@ -77,10 +82,5 @@
 </td>
 </table>
 </div>
-<aside>
-    <form id="form" action="/mybucketlist/search" method = "POST"> 
-        <input type="search" id="search" name="search" placeholder="Search...">
-        <button>Search</button>
-      </form>
-    </aside>
+
 {% endblock %}

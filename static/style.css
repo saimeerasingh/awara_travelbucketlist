@@ -97,4 +97,6 @@ input, select, button {
     margin: 10px;
     box-sizing: border-box;
   }
-  
+.search{
+    display: inline;
+}
