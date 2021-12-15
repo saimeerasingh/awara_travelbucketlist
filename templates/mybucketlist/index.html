@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class = checklist-table>
-<div class = "destinations-list">
     <table>
+    <td>
+    <tr>
+<div class = "destinations-list">
+<table>
         <tr>
         <th>City</th>
         <th>Country</th>
@@ -15,32 +18,27 @@
     <td><p>{{destination.country.name}}</p></td>
     <td><p>{{destination.name}}</p></td>
    
+
     <td>
-    <label for="visited">Visited</label>
-    <input type="checkbox" name="visited" id="visited" value="False" disabled="disabled">
-    </td>
-    {% if destination.visited %}
-    <p><i>Visited </i></p>
-    {% endif %}
-    </td>
-<td>
     <form class="delete-form" action="/mybucketlist/{{destination.id}}/delete" method="POST"> <!-- NEW -->
     <button class="trash-button">delete<i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
     </form> 
-</td>
-<td>
+    </td>
+    <td>
     <form action ="/mybucketlist/{{destination.id}}/set/visted" method = "POST">
         <button type="submit" >Set Visted</button>
     </form>
-</td>
+    </td>
     {% endif %}
     </tr>
     {% endfor %}
-</div>
-</table>         
 
-<div class = "destinations-list">
-    <table>
+</table>
+</div>
+    
+<div class = "destinations-list">  
+<table>
+
         <tr>
         <th>City</th>
         <th>Country</th>
@@ -54,17 +52,6 @@
     <td><p>{{destination.name}}</p></td>
     
         
-    <td>
-        <form>
-        <label for="visited">Visited</label>
-        <input type="checkbox" name="" id="visited" value="True" checked disabled="disabled">
-        </td>
-        {% if destination.visited %}
-        <p><i>Visited </i></p>
-        {% endif %}
-        <</form>
-    </td>
-       
 <td>
     <form class="delete-form" action="/mybucketlist/{{destination.id}}/delete" method="POST"> <!-- NEW -->
     <button class="trash-button">delete<i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
@@ -80,10 +67,13 @@
  
 </tr>
     {% endfor %}
+
+</table>   
 </div>
 
-</table>      
 
+</tr>
+</td>
+</table>
 </div>
-
 {% endblock %}

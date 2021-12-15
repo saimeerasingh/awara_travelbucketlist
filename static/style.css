@@ -1,11 +1,11 @@
 .home-image{
     width:100vw;
     height:100vh;
-    /* background-image: url('/static/pexels-francesco-ungaro-2325446.jpg'); */
+    background-image: url('/static/pexels-leah-kelley-3935702.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    opacity: 60%;
+    opacity: 70%;
 }
 .menu{
     display: flex;
