@@ -63,7 +63,6 @@ def update_destination(id):
 def set_not_visited_destination(id):
     destination = destination_repository.select(id)
     destination.visited = False
-    print("not visisted", destination.id , destination.name , destination.visited, file=sys.stderr)
     destination_repository.update(destination)
     return redirect('/mybucketlist')
 
@@ -81,7 +80,6 @@ def delete_destination(id):
 
 @destinations_blueprint.route('/mybucketlist/search', methods =['POST'])
 def search_destination():
-    print(request.form,file=sys.stderr)
     search_name = request.form['search']
     search_result = destination_repository.search_all(search_name)
     return  render_template('mybucketlist/index.html', all_destinations = search_result)
