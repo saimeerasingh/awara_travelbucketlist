@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-    
-
+<div class = " destination">
+<h2>Enter your dream Destination</h2> 
 <form  class = form-destination method="post" action="/destinations/new">
-    <div>
+  
+  <div>
+      
       <label for="country">Country Name</label>
       <select id="country" name="country">
         {% for country  in all_countries %}
@@ -28,6 +30,7 @@
     
     <button type="submit">Add Country to list</button>
   
-  </form>   
+  </form>  
+  </div> 
 
 {% endblock %}

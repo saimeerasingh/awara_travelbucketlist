@@ -1,4 +1,4 @@
-from unittest import result
+import sys
 from db.run_sql import run_sql
 from models.destination import Destination
 from models.country import Country
@@ -50,7 +50,14 @@ def update(destination):
     values = [destination.name,destination.visited, destination.country.id,destination.city.id,destination.id]
     run_sql(sql,values)
 
-
-
-
-
+def search_all(name):
+    destinations = []
+    sql = f"SELECT * FROM destinations WHERE name ilike '%{name}%'"
+    results = run_sql(sql)
+    print(name,results,file=sys.stderr)
+    for row in results:
+        country = country_repository.select(row["country_id"])
+        city = city_repository.select(row["city_id"])
+        destionation = Destination(row["name"],row["visited"],country,city,row["id"])
+        destinations.append(destionation)
+    return destinations

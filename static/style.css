@@ -20,11 +20,20 @@
     color: white;
     font-family: "Helvetica", arial, sans-serif; font-size: 20px;
   }
+.destination {
+    display: grid;
+    align-items: center;
+}
+.destination > h2{
+    justify-content: center;
+}
 .form-destination{
     display: flex;
     flex-wrap: wrap;
     width: 300px;
-    margin: 0 auto;
+    margin: auto;
+    padding: auto;
+    background-color: honeydew;
   }
     
 .destinations-list{

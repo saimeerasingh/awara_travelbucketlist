@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <div class = checklist-table>
     <table>
     <td>
@@ -76,4 +77,10 @@
 </td>
 </table>
 </div>
+<aside>
+    <form id="form" action="/mybucketlist/search" method = "POST"> 
+        <input type="search" id="search" name="search" placeholder="Search...">
+        <button>Search</button>
+      </form>
+    </aside>
 {% endblock %}

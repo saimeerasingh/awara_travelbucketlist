@@ -49,7 +49,6 @@ def create_destination():
 
 @destinations_blueprint.route('/mybucketlist/<id>',methods = ['POST'])
 def update_destination(id):
-    print(request.form, file=sys.stderr)
     country_id = request.form['country']
     city_id = request.form['city']
     dest_dest = request.form['destination']
@@ -79,3 +78,13 @@ def set_visited_destination(id):
 def delete_destination(id):
     destination_repository.delete(id)
     return redirect('/mybucketlist')
+
+@destinations_blueprint.route('/mybucketlist/search', methods =['POST'])
+def search_destination():
+    print(request.form,file=sys.stderr)
+    search_name = request.form['search']
+    search_result = destination_repository.search_all(search_name)
+    print(search_result,file=sys.stderr)
+    # destination_repository.delete(id)
+    return redirect('/mybucketlist')
+
