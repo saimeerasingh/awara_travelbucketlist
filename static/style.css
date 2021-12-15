@@ -10,15 +10,18 @@
 .menu{
     display: flex;
     padding: 10px;
-    background-color: grey;
-    opacity: 0.6;
-    color: white;
+    background-color:whitesmoke;
+    opacity: 80%;
+    font-size: x-large;
+    
 }
 .menu li{
     padding-right: 10px;
     list-style: none;
     color: white;
-    font-family: "Helvetica", arial, sans-serif; font-size: 20px;
+    font-family:"Comic Sans MS", "Comic Sans", cursive;
+    
+
   }
 .title{
    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
