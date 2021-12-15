@@ -1,29 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <div id="grid-container">
-<aside>
+<div class ="search">
 <form class = "search" id="form" action="/mybucketlist/search" method = "POST"> 
 <input type="text" placeholder="Search.." name="search">
 <button type="submit"><i class="fa fa-search"></i></button>
 </form>
-</aside>
+</div>
+
 
 <div class = "destinations-list">
 <table>
         <tr>
         <th>City</th>
-        <hr>
         <th>Country</th>
-        <hr>
         <th>Destination</th>
         </tr>
     {% for destination in all_destinations %}
     {% if not destination.visited %}
     <tr>
     <td><p>{{destination.city.name}}</p></td>
-        <hr>
     <td><p>{{destination.country.name}}</p></td>
-    <hr>
     <td><p>{{destination.name}}</p></td>
    
 

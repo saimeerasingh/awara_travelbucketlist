@@ -83,8 +83,9 @@ title{
       'search search'
       'table1  table2';
     /* grid-template-columns: 4fr 4fr; */
-    align-content: space-around;
-    justify-content: space-between;
+    /* align-content: space-around;
+    justify-content: space-between; */
+    
   }
 
 .delete-form{
@@ -100,7 +101,7 @@ title{
 .container{
   display: flex;
   flex-wrap: wrap;
-  width: 300px;
+  width: 100%;
   margin: 0 auto;
 }
 input, select, button {
@@ -113,6 +114,7 @@ input, select, button {
 .search{
     display: inline;
     grid-area: search;
+    margin-left: 600px;
   }
   
   /* Style the search field */
