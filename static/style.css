@@ -61,10 +61,10 @@ title{
     display: grid;
     grid-template-columns:auto;
     display: flex;
-    flex-wrap: wrap;
-    width: 300px;
+    flex-wrap: wrap; 
     margin: 0 auto;
     background-color: honeydew;
+    grid-area: table1;
 
 }
 .destinations-list-1{
@@ -72,13 +72,20 @@ title{
     grid-template-columns:auto;
     display: flex;
     flex-wrap: wrap;
-    width: 300px;
     margin: 0 auto;
     background-color: honeydew;
+    grid-area: table2;
 }
-/* .checklist-table{
-    display: flex;
-} */
+#grid-container {
+    display: grid;
+    grid-gap: 20px 50px;
+    grid-template-areas:
+      'search search'
+      'table1  table2';
+    /* grid-template-columns: 4fr 4fr; */
+    align-content: space-around;
+    justify-content: space-between;
+  }
 
 .delete-form{
     display: inline;
@@ -105,7 +112,7 @@ input, select, button {
   }
 .search{
     display: inline;
-    box-sizing: border-box;
+    grid-area: search;
   }
   
   /* Style the search field */
@@ -140,3 +147,4 @@ form.search::after {
     clear: both;
     display: table;
   }
+

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<div id="grid-container">
 <aside>
 <form class = "search" id="form" action="/mybucketlist/search" method = "POST"> 
 <input type="text" placeholder="Search.." name="search">
@@ -12,14 +12,18 @@
 <table>
         <tr>
         <th>City</th>
+        <hr>
         <th>Country</th>
+        <hr>
         <th>Destination</th>
         </tr>
     {% for destination in all_destinations %}
     {% if not destination.visited %}
     <tr>
     <td><p>{{destination.city.name}}</p></td>
+        <hr>
     <td><p>{{destination.country.name}}</p></td>
+    <hr>
     <td><p>{{destination.name}}</p></td>
    
 
@@ -30,12 +34,13 @@
     </td>
     <td>
     <form action ="/mybucketlist/{{destination.id}}/set/visted" method = "POST">
-        <button type="submit" >Set Visted</button>
+        <button type="submit" >Visted</button>
     </form>
     </td>
     {% endif %}
-    </tr>
     {% endfor %}
+    </tr>
+    
 
 </table>
 </div>
@@ -64,17 +69,17 @@
 </td>     
 <td>
     <form action ="/mybucketlist/{{destination.id}}/set/not/visted" method = "POST">
-        <button type="submit" >Set Not Visited</button>
+        <button type="submit">Not Visited</button>
     </form>
 
 </td>
     {% endif %}
- 
-</tr>
     {% endfor %}
+</tr>
+   
 
 </table>   
 </div>
-
+</div>
 
 {% endblock %}
