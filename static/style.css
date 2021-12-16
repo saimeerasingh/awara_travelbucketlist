@@ -39,12 +39,19 @@ title{
    background:whitesmoke;
    opacity: 80%;
 }
+.container-class{
+    grid-area: form;
+}
 .destination {
     display: grid;
     align-items: center;
+    grid-template-areas: 
+    'header header'
+    'form form';
+    margin-left: 500px;
 }
 .destination > h2{
-    justify-content: center;
+    grid-area: header;
 }
 .form-destination{
     display: flex;
@@ -143,4 +150,5 @@ form.search::after {
     clear: both;
     display: table;
   }
+
 
