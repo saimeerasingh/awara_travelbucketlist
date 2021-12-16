@@ -60,6 +60,7 @@ title{
     margin: auto;
     padding: auto;
     background-color: honeydew;
+    opacity: 0.8;
   }
     
 .destinations-list{
@@ -70,6 +71,7 @@ title{
     margin: 0 auto;
     background-color: honeydew;
     grid-area: table1;
+    opacity: 0.8;
 
 }
 .destinations-list-1{
@@ -80,6 +82,7 @@ title{
     margin: 0 auto;
     background-color: honeydew;
     grid-area: table2;
+    opacity: 0.8;
 }
 #grid-container {
     display: grid;
