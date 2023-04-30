@@ -39,7 +39,7 @@
 
 ## Select from existing city drop down from data base/ entering a new city
 
-![alt text for screen readers](images/fouth.png "Text to show on mouseover").
+![alt text for screen readers](images/forth.png "Text to show on mouseover").
 
 ## Enter the destination
 
