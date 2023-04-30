@@ -20,4 +20,36 @@
  flask run
 ```
 
+## App Home page
+
+![alt text for screen readers](images/first.png "Text to show on mouseover").
+
+
+## Bucket list page
+
+![alt text for screen readers](images/first1.png "Text to show on mouseover").
+
+## Adding destination to bucket list
+
+![alt text for screen readers](images/second.png "Text to show on mouseover").
+
+## Select from existing country drop down from data base/ entering a new country
+
+![alt text for screen readers](images/third.png "Text to show on mouseover").
+
+## Select from existing city drop down from data base/ entering a new city
+
+![alt text for screen readers](images/fouth.png "Text to show on mouseover").
+
+## Enter the destination
+
+![alt text for screen readers](images/fifth.png "Text to show on mouseover").
+
+## Find the destination in the bucket list
+
+![alt text for screen readers](images/sixth.png "Text to show on mouseover").
+
+## Delete or Mark destination as visited
+
+![alt text for screen readers](images/seventh.png "Text to show on mouseover").
 
